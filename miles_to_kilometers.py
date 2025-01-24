@@ -4,12 +4,12 @@ MULTIPLIER = 1.60934
 
 window = Tk()
 window.title("Miles Converter")
-window.minsize(width=500, height=500)
-window.config(padx=100, pady=150)
+window.config(padx=30, pady=30)
 
 def calculate_kilos():
-    kilos = int(user_miles.get()) * MULTIPLIER
-    output_kilos.config(text=round(kilos))
+    miles = float(user_miles.get())
+    kilos = round(miles * MULTIPLIER)
+    output_kilos.config(text=kilos)
 
 
 user_miles = Entry(width=10)
